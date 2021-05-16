@@ -1,7 +1,3 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
 # svelte app
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
@@ -25,4 +21,15 @@ npx degit sveltejs/template wc-svelte-clock
 2. install the app 
 ```js
 cd wc-svelte-clock && yarn
+```
+3. Add clock in `App.svelte` taken from [clock](https://svelte.dev/repl/clock?version=3.38.2)
+4. Add `customElement: true` inside rollup.config.js
+5. Create `svelte:options` inside `App.svelte`
+```html
+<svelte:options tag=”svelte-clock” immutable={true} />
+```
+6. Remove unwanted code in main.js
+7. To test in local add below in `public/index.html`
+```html
+<svelte-clock></svelte-clock>
 ```
