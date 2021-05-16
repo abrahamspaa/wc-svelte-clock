@@ -19,7 +19,7 @@ cd svelte-app
 npx degit sveltejs/template wc-svelte-clock
 ```
 2. install the app 
-```js
+```bash
 cd wc-svelte-clock && yarn
 ```
 3. Add clock in `App.svelte` taken from [clock](https://svelte.dev/repl/clock?version=3.38.2)
@@ -33,3 +33,20 @@ cd wc-svelte-clock && yarn
 ```html
 <svelte-clock></svelte-clock>
 ```
+
+## How to publish in github 
+
+1. Create folder as docs
+```bash
+mkdir docs && touch docs/index.html
+```
+2. Bundle up 
+```bash
+yarn build
+```
+3. Copy public/build/bundle.js to docs/bundle.js
+
+## Reference 
+
+- https://itnext.io/svelte-web-component-5-4kb-4afe46590d99
+- https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
